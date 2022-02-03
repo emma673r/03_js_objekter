@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <article></article>
+    <script>
+      document.addEventListener("DOMContentLoaded", start);
+
+      let dyrArray = [
+        {
+          navn: "frø",
+          type: "amfibie",
+          billede: "http://mabe-kea.dk/E19/pics/frog.png",
+          levested: "vandhullet",
+        },
+        {
+          navn: "gris",
+          type: "pattedyr",
+          billede: "http://mabe-kea.dk/E19/pics/pig.png",
+          levested: "svinefarme",
+        },
+        {
+          navn: "ræv",
+          type: "pattedyr",
+          billede: "http://mabe-kea.dk/E19/pics/fox.png",
+          levested: "skoven",
+        },
+        {
+          navn: "sild",
+          type: "fisk",
+          billede: "http://mabe-kea.dk/E19/pics/sild.png",
+          levested: "havet",
+        },
+        {
+          navn: "krokodille",
+          type: "krybdyr",
+          billede: "http://mabe-kea.dk/E19/pics/kroko.png",
+          levested: "floden",
+        },
+      ];
+
+      function start() {
+        console.log(dyrArray);
+        const article = document.querySelector("article");
+        article.style.display = "flex";
+        article.style.flexDirection = "column";
+
+        dyrArray.forEach((dyr) => {
+          article.innerHTML += `<p>${dyr.navn}, ${dyr.type} fra ${dyr.levested}</p>`;
+        });
+      }
+
+      // function start() {
+      //   console.log(
+      //     `Dyr: ${dyr.navn}, type: ${dyr.type}, levested: ${dyr.levested}`
+      //   );
+      //
+      //   article.textContent = `Dyr: ${dyr.navn}, type: ${dyr.type}, levested: ${dyr.levested}`;
+      //   const img = document.createElement("img");
+      //   img.src = dyr.billede;
+      //   img.alt = dyr.navn;
+      //   article.appendChild(img);
+      //   article.style.display = "grid";
+      // }
+    </script>
+  </body>
+</html>
